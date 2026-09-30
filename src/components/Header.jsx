@@ -1,5 +1,5 @@
 import React from 'react';
-import { Volume2, VolumeX, Flame, Trophy, PlayCircle, BookOpen, Shuffle, HelpCircle } from 'lucide-react';
+import { Volume2, VolumeX, Flame, Trophy, PlayCircle, BookOpen, Shuffle, HelpCircle, Clock } from 'lucide-react';
 import { soundEffects } from '../utils/soundEffects';
 
 export default function Header({
@@ -11,6 +11,8 @@ export default function Header({
   totalQuestions,
   soundOn,
   setSoundOn,
+  timerEnabled,
+  setTimerEnabled,
   onReset
 }) {
   const handleSoundToggle = () => {
@@ -45,8 +47,23 @@ export default function Header({
           </span>
         </div>
 
-        {/* Right: Sound Toggle */}
+        {/* Right: Sound and Timer Toggles */}
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            role="switch"
+            aria-checked={timerEnabled}
+            aria-label="Question timer"
+            onClick={() => setTimerEnabled((enabled) => !enabled)}
+            className={`p-2 rounded-full transition-all border ${
+              timerEnabled
+                ? 'bg-amber-400 text-slate-900 border-amber-300 shadow-md hover:bg-amber-300'
+                : 'bg-black/40 text-slate-300 border-white/20 hover:bg-black/60'
+            } active:scale-95`}
+            title={timerEnabled ? 'Timer on: 15 seconds' : 'Timer off'}
+          >
+            <Clock size={18} />
+          </button>
           <button
             onClick={handleSoundToggle}
             className={`p-2 rounded-full transition-all border ${

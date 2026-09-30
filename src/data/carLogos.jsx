@@ -1262,7 +1262,7 @@ export const CAR_LOGOS = [
   {
     id: 35,
     slug: 'alfa-romeo',
-    imageUrl: '/logos/alfa-romeo.png',
+    imageUrl: '/logos/alfa-romeo-logo.png',
     remoteUrl: 'https://1000logos.net/wp-content/uploads/2018/09/Alfa-Romeo-Logo-500x281.png',
     source: '1000logos.net',
     name: 'Alfa Romeo',
@@ -1808,7 +1808,13 @@ export const CAR_LOGOS = [
 
 // Helper to get questions shuffled with randomized options
 export function getQuizQuestions() {
-  return CAR_LOGOS.map((item) => {
+  const shuffledLogos = [...CAR_LOGOS];
+  for (let i = shuffledLogos.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledLogos[i], shuffledLogos[j]] = [shuffledLogos[j], shuffledLogos[i]];
+  }
+
+  return shuffledLogos.map((item) => {
     // Ensure all 4 options exist and include the correct name
     let opts = [...item.options];
     if (!opts.includes(item.name)) {

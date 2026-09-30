@@ -18,6 +18,7 @@ export default function App() {
   const [correctCount, setCorrectCount] = useState(0);
   const [history, setHistory] = useState([]);
   const [soundOn, setSoundOn] = useState(() => soundEffects.isEnabled());
+  const [timerEnabled, setTimerEnabled] = useState(true);
   const [highScore, setHighScore] = useState(() => {
     try {
       return Number(localStorage.getItem('logo_quiz_high_score')) || 0;
@@ -116,6 +117,8 @@ export default function App() {
         totalQuestions={questions.length}
         soundOn={soundOn}
         setSoundOn={setSoundOn}
+        timerEnabled={timerEnabled}
+        setTimerEnabled={setTimerEnabled}
         onReset={handleRestart}
       />
 
@@ -128,7 +131,8 @@ export default function App() {
             totalQuestions={questions.length}
             onAnswer={handleAnswer}
             onNext={handleNext}
-            timerDuration={8}
+            timerDuration={15}
+            timerEnabled={timerEnabled}
           />
         )}
 
@@ -183,7 +187,8 @@ export default function App() {
       {/* Bottom Footer Credits */}
       <footer className="w-full max-w-4xl px-4 pt-4 text-center text-xs text-blue-300/60 border-t border-blue-500/10">
         <p>
-          Inspired by <strong className="text-white">Knowlio</strong> "50 Famous Car Logos You Should Know" Quiz • Built with React & Vite
+          Inspired by <strong className="text-white">Knowlio</strong> "50 Famous Car Logos You Should Know" Quiz • Built with React & Vite • 
+          Contact: ShawnDKW • <a href="https://github.com/SwarnenduDasKW" className="underline" target="_blank" rel="noopener noreferrer">GitHub</a> • <a href="https://www.linkedin.com/in/swarnendu-das-41479531" className="underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
       </footer>
     </div>

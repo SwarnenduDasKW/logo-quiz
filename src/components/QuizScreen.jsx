@@ -13,7 +13,8 @@ export default function QuizScreen({
   totalQuestions,
   onAnswer,
   onNext,
-  timerDuration = 8 // Default 8 seconds per question
+  timerDuration = 15,
+  timerEnabled = true
 }) {
   const [timeLeft, setTimeLeft] = useState(timerDuration);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -39,7 +40,7 @@ export default function QuizScreen({
 
   // Countdown timer loop
   useEffect(() => {
-    if (isAnswered) {
+    if (isAnswered || !timerEnabled) {
       clearInterval(timerRef.current);
       return;
     }
@@ -64,7 +65,7 @@ export default function QuizScreen({
     }, 1000);
 
     return () => clearInterval(timerRef.current);
-  }, [isAnswered, currentQuestion]);
+  }, [isAnswered, currentQuestion, timerEnabled]);
 
   const handleTimeOut = () => {
     if (isAnswered) return;
@@ -149,22 +150,25 @@ export default function QuizScreen({
           {diff.name}
         </span>
 
-        {/* Timer Pill */}
-        <div className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1 rounded-full border border-slate-700/60 font-mono text-sm sm:text-base font-bold text-white shadow-inner">
-          <Clock size={16} className={timeLeft <= 2 ? 'text-red-400 animate-pulse' : 'text-cyan-400'} />
-          <span className={timeLeft <= 2 ? 'text-red-400 font-extrabold' : 'text-slate-200'}>
-            00:0{timeLeft}
-          </span>
-        </div>
+        {timerEnabled && (
+          <div className="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1 rounded-full border border-slate-700/60 font-mono text-sm sm:text-base font-bold text-white shadow-inner">
+            <Clock size={16} className={timeLeft <= 2 ? 'text-red-400 animate-pulse' : 'text-cyan-400'} />
+            <span className={timeLeft <= 2 ? 'text-red-400 font-extrabold' : 'text-slate-200'}>
+              00:{String(timeLeft).padStart(2, '0')}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Animated Timer Progress Bar */}
-      <div className="w-full h-2.5 bg-slate-950/80 rounded-full overflow-hidden mb-5 border border-slate-700/40 p-0.5">
-        <div
-          className={`h-full rounded-full transition-all duration-1000 ease-linear shadow-lg ${timerColor}`}
-          style={{ width: `${timerPercent}%` }}
-        />
-      </div>
+      {timerEnabled && (
+        <div className="w-full h-2.5 bg-slate-950/80 rounded-full overflow-hidden mb-5 border border-slate-700/40 p-0.5">
+          <div
+            className={`h-full rounded-full transition-all duration-1000 ease-linear shadow-lg ${timerColor}`}
+            style={{ width: `${timerPercent}%` }}
+          />
+        </div>
+      )}
 
       {/* Country Hint Tag (If revealed) */}
       {countryHintRevealed && (
@@ -266,6 +270,7 @@ export default function QuizScreen({
               onUseExtraTime={handleUseExtraTime}
               countryHintRevealed={countryHintRevealed}
               disabled={isAnswered}
+              timerEnabled={timerEnabled}
             />
           )}
         </div>

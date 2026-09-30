@@ -8,7 +8,8 @@ export default function Lifelines({
   onUseOriginHint,
   onUseExtraTime,
   countryHintRevealed,
-  disabled
+  disabled,
+  timerEnabled = true
 }) {
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-3 my-2 select-none">
@@ -48,23 +49,24 @@ export default function Lifelines({
         <span>Country Hint</span>
       </button>
 
-      {/* Extra Time */}
-      <button
-        onClick={() => {
-          soundEffects.lifeline();
-          onUseExtraTime();
-        }}
-        disabled={disabled || lifelinesUsed['time']}
-        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-bold text-xs sm:text-sm border transition-all ${
-          lifelinesUsed['time']
-            ? 'bg-slate-800/40 text-slate-500 border-slate-700/40 cursor-not-allowed opacity-50'
-            : 'bg-emerald-600/80 hover:bg-emerald-500 text-white border-emerald-400/50 shadow-md shadow-emerald-500/20 active:scale-95'
-        }`}
-        title="Add +5 seconds to timer"
-      >
-        <Timer size={14} className="text-emerald-200" />
-        <span>+5s Time</span>
-      </button>
+      {timerEnabled && (
+        <button
+          onClick={() => {
+            soundEffects.lifeline();
+            onUseExtraTime();
+          }}
+          disabled={disabled || lifelinesUsed['time']}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-bold text-xs sm:text-sm border transition-all ${
+            lifelinesUsed['time']
+              ? 'bg-slate-800/40 text-slate-500 border-slate-700/40 cursor-not-allowed opacity-50'
+              : 'bg-emerald-600/80 hover:bg-emerald-500 text-white border-emerald-400/50 shadow-md shadow-emerald-500/20 active:scale-95'
+          }`}
+          title="Add +5 seconds to timer"
+        >
+          <Timer size={14} className="text-emerald-200" />
+          <span>+5s Time</span>
+        </button>
+      )}
     </div>
   );
 }
