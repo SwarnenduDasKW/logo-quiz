@@ -1804,7 +1804,299 @@ export const CAR_LOGOS = [
       </svg>
     )
   }
+,
+  {
+    id: 51,
+    slug: 'alpine',
+    imageUrl: '/logos/alpine.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Alpine-logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Alpine',
+    options: ['Alpine', 'Bugatti', 'Peugeot', 'Renault'],
+    country: 'France',
+    countryFlag: '🇫🇷',
+    founded: 1955,
+    difficulty: 3,
+    trivia: 'Founded by Jean Rédélé in Dieppe, France. Renowned for nimble lightweight sports cars like the rally-dominating A110 and competing in Formula 1.',
+    renderLogo: () => (
+      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[180px] max-h-[180px] drop-shadow-md">
+        <defs>
+          <linearGradient id="alpineBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#0066cc" />
+            <stop offset="100%" stopColor="#003380" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="92" fill="url(#alpineBlue)" stroke="#e2e8f0" strokeWidth="6" />
+        <path d="M 50 148 L 94 48 L 106 48 L 150 148 L 128 148 L 115 118 L 78 118 L 88 98 L 138 98 L 100 68 L 68 148 Z" fill="#ffffff" />
+      </svg>
+    )
+  },
+  {
+    id: 52,
+    slug: 'daewoo',
+    imageUrl: '/logos/daewoo.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2020/04/Daewoo-Logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Daewoo',
+    options: ['Daewoo', 'Hyundai', 'Kia', 'SsangYong'],
+    country: 'South Korea',
+    countryFlag: '🇰🇷',
+    founded: 1967,
+    difficulty: 3,
+    trivia: 'Founded by Kim Woo-choong in Seoul. The emblem represents an open seashell or lotus blossom radiating outward with spreading wings.',
+    renderLogo: () => (
+      <svg viewBox="0 0 220 180" className="w-full h-full max-w-[190px] max-h-[150px] drop-shadow-md">
+        <defs>
+          <linearGradient id="daewooSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#cbd5e1" />
+            <stop offset="100%" stopColor="#64748b" />
+          </linearGradient>
+        </defs>
+        <path d="M 110 30 C 130 55 145 90 145 130 C 125 125 115 125 110 125 C 105 125 95 125 75 130 C 75 90 90 55 110 30 Z" fill="url(#daewooSilver)" />
+        <path d="M 60 75 C 45 95 38 120 40 145 C 58 138 72 136 85 137 C 82 115 88 95 100 80 C 82 76 70 75 60 75 Z" fill="url(#daewooSilver)" />
+        <path d="M 160 75 C 175 95 182 120 180 145 C 162 138 148 136 135 137 C 138 115 132 95 120 80 C 138 76 150 75 160 75 Z" fill="url(#daewooSilver)" />
+      </svg>
+    )
+  },
+  {
+    id: 53,
+    slug: 'datsun',
+    imageUrl: '/logos/datsun.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Datsun-logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Datsun',
+    options: ['Datsun', 'Nissan', 'Mazda', 'Toyota'],
+    country: 'Japan',
+    countryFlag: '🇯🇵',
+    founded: 1931,
+    difficulty: 3,
+    trivia: 'Originally "DAT Motorcar Co." from the initials of its founders. Gained worldwide acclaim for affordable sports coupes like the legendary 240Z.',
+    renderLogo: (revealed) => (
+      <svg viewBox="0 0 220 160" className="w-full h-full max-w-[200px] max-h-[140px] drop-shadow-md">
+        <defs>
+          <linearGradient id="datsunRed" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ef4444" />
+            <stop offset="100%" stopColor="#b91c1c" />
+          </linearGradient>
+          <linearGradient id="datsunBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#1e3a8a" />
+            <stop offset="100%" stopColor="#0f172a" />
+          </linearGradient>
+        </defs>
+        <circle cx="110" cy="80" r="60" fill="url(#datsunRed)" stroke="#f8fafc" strokeWidth="4" />
+        <rect x="15" y="60" width="190" height="40" rx="8" fill="url(#datsunBlue)" stroke="#f8fafc" strokeWidth="4" />
+        {revealed && (
+          <text x="110" y="87" textAnchor="middle" fill="#ffffff" fontWeight="900" fontSize="22" letterSpacing="3" fontFamily="Montserrat, sans-serif">
+            DATSUN
+          </text>
+        )}
+      </svg>
+    )
+  },
+  {
+    id: 54,
+    slug: 'ford-mustang',
+    imageUrl: '/logos/ford-mustang.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Mustang-logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Ford Mustang',
+    options: ['Ford Mustang', 'Ferrari', 'Porsche', 'Corvette'],
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    founded: 1964,
+    difficulty: 2,
+    trivia: 'Created by designer Phil Clark, the iconic galloping wild horse runs toward the left (westward), symbolizing the untamed spirit of American freedom and open highways.',
+    renderLogo: () => (
+      <svg viewBox="0 0 220 140" className="w-full h-full max-w-[200px] max-h-[120px] drop-shadow-lg">
+        <defs>
+          <linearGradient id="mustangSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#cbd5e1" />
+            <stop offset="100%" stopColor="#64748b" />
+          </linearGradient>
+        </defs>
+        <path d="M 175 48 C 160 40 142 42 135 46 C 122 36 102 38 92 48 C 85 45 72 48 68 55 C 60 52 48 55 42 62 C 35 68 32 78 38 82 C 45 86 52 82 58 85 C 62 92 68 102 78 108 C 82 98 88 92 95 90 C 105 92 118 88 126 80 C 135 88 145 95 158 98 C 165 92 168 85 162 78 C 172 75 180 65 178 55 C 178 50 176 48 175 48 Z" fill="url(#mustangSilver)" stroke="#e2e8f0" strokeWidth="2" />
+        <path d="M 65 85 L 48 112 L 56 115 L 75 92 Z" fill="url(#mustangSilver)" />
+        <path d="M 130 85 L 145 118 L 155 116 L 140 82 Z" fill="url(#mustangSilver)" />
+      </svg>
+    )
+  },
+  {
+    id: 55,
+    slug: 'polestar',
+    imageUrl: '/logos/polestar.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Polestar-logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Polestar',
+    options: ['Polestar', 'Volvo', 'Tesla', 'Rivian'],
+    country: 'Sweden',
+    countryFlag: '🇸🇪',
+    founded: 1996,
+    difficulty: 3,
+    trivia: 'Originally Volvo’s racing and high-performance skunkworks, Polestar became an independent Swedish electric car maker. Its logo forms the guiding North Star with two diagonal arrow chevrons.',
+    renderLogo: () => (
+      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[170px] max-h-[170px] drop-shadow-md">
+        <defs>
+          <linearGradient id="poleSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#94a3b8" />
+          </linearGradient>
+        </defs>
+        <polygon points="100,28 100,92 145,92 164,73 125,73 125,47" fill="url(#poleSilver)" />
+        <polygon points="100,172 100,108 55,108 36,127 75,127 75,153" fill="url(#poleSilver)" />
+      </svg>
+    )
+  },
+  {
+    id: 56,
+    slug: 'rivian',
+    imageUrl: '/logos/rivian.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/11/Rivian-Logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Rivian',
+    options: ['Rivian', 'Lucid', 'Tesla', 'Karma'],
+    country: 'USA',
+    countryFlag: '🇺🇸',
+    founded: 2009,
+    difficulty: 3,
+    trivia: 'Founded by RJ Scaringe to build all-electric adventure trucks and SUVs. The emblem is a stylized geometric compass with four arrows symbolizing exploration and sustainable journeys.',
+    renderLogo: () => (
+      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[170px] max-h-[170px] drop-shadow-md">
+        <defs>
+          <linearGradient id="rivianGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f59e0b" />
+            <stop offset="100%" stopColor="#d97706" />
+          </linearGradient>
+        </defs>
+        <path d="M 100 25 L 175 100 L 100 175 L 25 100 Z" fill="none" stroke="url(#rivianGold)" strokeWidth="12" strokeLinejoin="miter" />
+        <path d="M 100 55 L 145 100 L 100 145 L 55 100 Z" fill="none" stroke="#f8fafc" strokeWidth="8" strokeLinejoin="miter" />
+        <polygon points="100,75 125,100 100,125 75,100" fill="url(#rivianGold)" />
+      </svg>
+    )
+  },
+  {
+    id: 57,
+    slug: 'ssangyong',
+    imageUrl: '/logos/ssangyong.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2020/04/SsangYong-Logo-500x281.png',
+    source: '1000logos.net',
+    name: 'SsangYong',
+    options: ['SsangYong', 'Daewoo', 'Hyundai', 'Genesis'],
+    country: 'South Korea',
+    countryFlag: '🇰🇷',
+    founded: 1954,
+    difficulty: 4,
+    trivia: 'The Korean name translates to "Double Dragons". The twin loops represent two mythical dragons ascending into the heavens, famed for rugged SUVs like the Rexton and Korando.',
+    renderLogo: () => (
+      <svg viewBox="0 0 220 180" className="w-full h-full max-w-[190px] max-h-[150px] drop-shadow-md">
+        <defs>
+          <linearGradient id="ssangSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#94a3b8" />
+            <stop offset="100%" stopColor="#475569" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="110" cy="90" rx="95" ry="65" fill="none" stroke="url(#ssangSilver)" strokeWidth="10" />
+        <path d="M 75 75 C 65 60 80 50 95 65 C 105 75 105 95 90 105 C 75 115 60 105 65 85" fill="none" stroke="url(#ssangSilver)" strokeWidth="8" strokeLinecap="round" />
+        <path d="M 145 75 C 155 60 140 50 125 65 C 115 75 115 95 130 105 C 145 115 160 105 155 85" fill="none" stroke="url(#ssangSilver)" strokeWidth="8" strokeLinecap="round" />
+      </svg>
+    )
+  },
+  {
+    id: 58,
+    slug: 'vauxhall',
+    imageUrl: '/logos/vauxhall.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Vauxhall-logo-500x281.png',
+    source: '1000logos.net',
+    name: 'Vauxhall',
+    options: ['Vauxhall', 'Holden', 'Opel', 'Bentley'],
+    country: 'United Kingdom',
+    countryFlag: '🇬🇧',
+    founded: 1857,
+    difficulty: 3,
+    trivia: 'One of the United Kingdom’s oldest car brands. The griffin emblem originates from the 13th-century heraldic arms of Sir Falkes de Breauté, clutching a pennant stamped with the letter "V".',
+    renderLogo: (revealed) => (
+      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[180px] max-h-[180px] drop-shadow-md">
+        <defs>
+          <linearGradient id="vauxhallRed" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#dc2626" />
+            <stop offset="100%" stopColor="#991b1b" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="92" fill="url(#vauxhallRed)" stroke="#f8fafc" strokeWidth="6" />
+        <path d="M 105 45 C 98 42 90 48 92 58 C 85 58 75 65 72 75 C 68 85 75 95 82 95 C 75 105 70 120 75 135 C 80 148 95 152 110 150 C 125 148 135 135 132 120 C 130 110 122 102 115 98 C 125 90 130 75 125 60 C 120 50 112 46 105 45 Z" fill="#ffffff" />
+        <line x1="120" y1="55" x2="155" y2="90" stroke="#f8fafc" strokeWidth="5" />
+        <polygon points="155,90 135,80 145,98" fill="#ffffff" />
+        {revealed && (
+          <text x="142" y="93" fill="#dc2626" fontWeight="900" fontSize="11" fontFamily="Montserrat, sans-serif">
+            V
+          </text>
+        )}
+      </svg>
+    )
+  }
+,
+  {
+    id: 59,
+    slug: 'tata',
+    imageUrl: '/logos/tata.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2021/04/Tata-Logo.png',
+    source: 'local',
+    name: 'Tata',
+    options: ['Tata', 'Mahindra', 'Maruti', 'Hindustan Motors'],
+    country: 'India',
+    countryFlag: '🇮🇳',
+    founded: 1945,
+    difficulty: 3,
+    trivia: `Tata Motors is one of India's largest automotive conglomerates, now owning Jaguar Land Rover. Founded in 1945 by JRD Tata, it produced the iconic Nano — once the world's cheapest car.`,
+    renderLogo: (revealed) => (
+      <svg viewBox="0 0 220 160" className="w-full h-full max-w-[200px] max-h-[140px] drop-shadow-md">
+        <defs>
+          <linearGradient id="tataBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#003399" />
+            <stop offset="100%" stopColor="#001a66" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="110" cy="80" rx="100" ry="60" fill="url(#tataBlue)" stroke="#e2e8f0" strokeWidth="5" />
+        {revealed && (
+          <text x="110" y="90" textAnchor="middle" fill="#ffffff" fontWeight="900" fontSize="30" letterSpacing="4" fontFamily="Montserrat, sans-serif">
+            TATA
+          </text>
+        )}
+      </svg>
+    ),
+  },
+  {
+    id: 60,
+    slug: 'opel',
+    imageUrl: '/logos/opel.png',
+    remoteUrl: 'https://1000logos.net/wp-content/uploads/2016/10/Opel-Logo.png',
+    source: 'local',
+    name: 'Opel',
+    options: ['Opel', 'Vauxhall', 'Peugeot', 'Renault'],
+    country: 'Germany',
+    countryFlag: '🇩🇪',
+    founded: 1899,
+    difficulty: 2,
+    trivia: `Opel's lightning bolt emblem represents speed and dynamism. Sister brand to Vauxhall in the UK, Opel is now part of Stellantis and has been manufacturing cars for over 125 years.`,
+    renderLogo: () => (
+      <svg viewBox="0 0 200 200" className="w-full h-full max-w-[180px] max-h-[180px] drop-shadow-md">
+        <defs>
+          <linearGradient id="opelSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#cbd5e1" />
+            <stop offset="100%" stopColor="#64748b" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="92" fill="#1e293b" stroke="url(#opelSilver)" strokeWidth="6" />
+        <polygon points="115,28 80,105 105,105 85,172 140,88 112,88 140,28" fill="url(#opelSilver)" />
+      </svg>
+    ),
+  }
+
 ];
+
 
 // Helper to get questions shuffled with randomized options
 export function getQuizQuestions() {

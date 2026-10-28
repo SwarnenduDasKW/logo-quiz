@@ -197,7 +197,7 @@ export default function Header({
               }`}
             >
               <BookOpen size={15} />
-              <span>All 50 Logos</span>
+              <span>All 60 Logos</span>
             </button>
 
             {/* Switch to Opposite Words Quiz Pill */}

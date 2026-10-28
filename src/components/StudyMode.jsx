@@ -43,10 +43,10 @@ export default function StudyMode({ onTestBrand }) {
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
         <div>
           <h2 className="text-2xl sm:text-3xl font-quiz font-black text-white flex items-center gap-2">
-            <span>The 50 Famous Car Logos Catalog</span>
+            <span>The 60 Famous Car Logos Catalog</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            Explore all 50 automobile marks, test your recall, and study brand heritage.
+            Explore all 60 automobile marks, test your recall, and study brand heritage.
           </p>
         </div>
 
