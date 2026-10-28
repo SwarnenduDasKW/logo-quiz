@@ -147,13 +147,13 @@ export default function LandingPage({ onSelect }) {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-              Can you name 50 famous car emblems? Features high-octane Speed Run, Letter Scramble, and full YouTube Video Auto-Play mode!
+              Can you name 60 famous car emblems? Features high-octane Speed Run, Letter Scramble, and full YouTube Video Auto-Play mode!
             </p>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap gap-2 mb-6 text-xs font-semibold">
               <span className="px-2.5 py-1 rounded-lg bg-blue-950/60 border border-blue-500/30 text-blue-200 flex items-center gap-1">
-                🏁 50 Famous Brands
+                🏁 60 Famous Brands
               </span>
               <span className="px-2.5 py-1 rounded-lg bg-purple-950/60 border border-purple-500/30 text-purple-200 flex items-center gap-1">
                 🔤 Letter Scramble

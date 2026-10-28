@@ -19,7 +19,7 @@ export default function ResultsScreen({
     title: 'Learner Driver',
     badge: '🚦',
     color: 'from-slate-600 to-slate-800',
-    desc: 'You are just beginning your automotive journey. Hit Study Mode to learn all 50 logos!'
+    desc: 'You are just beginning your automotive journey. Hit Study Mode to learn all 60 logos!'
   };
 
   if (accuracy >= 90) {
